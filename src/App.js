@@ -2,9 +2,12 @@
 //import React from 'react';
 //import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import SignUpPage from "./components/SignUp";
-import Navigate from "./components/Home";
-import { signUp } from "./components/modal";
+import SignUpPage from "./components/landingPage";
+import Home from "./components/Home";
+import { Route, Routes } from "react-router-dom";
+import LogInForm from "./components/sign";
+import MobileSearch from "./components/mobileSearch";
+import SearchPage from "./components/search";
 /* <div>
       <Routes>
         <Route path="/" element={<SignUpPage/>} />
@@ -24,47 +27,21 @@ const LogIn = () => {
     return <h2>not here </h2>;
   }
 };*/
-let names = {};
-
-function SignUp() {
-  newUserCredentials();
-}
-
-function newUserCredentials() {
-  names.usrName = document.getElementById("userLoginName").value;
-  names.userPsw = document.getElementById("userLoginPassword").value;
-  let firstName = document.getElementById("firstName").value;
-  let lastName = document.getElementById("lastName").value;
-  let dateOfBth = document.getElementById("dob").value;
-  //addNewUser();
-  localStorage.setItem("name", usrName);
-  localStorage.setItem("psw", userPsw);
-
-  alert(localStorage.getItem("name"));
-  alert(localStorage.getItem("psw"));
-}
-
-const LogIn = () => {
-  if (
-    document.getElementById("userLoginName").value ===
-      localStorage.getItem("name") &&
-    document.getElementById("userLoginPassword").value ===
-      localStorage.getItem("psw")
-  ) {
-    return <h1> i am here </h1>;
-  } else {
-    return <h2>not here </h2>;
-  }
-};
+//file component
 
 function App() {
   return (
     <>
-      <SignUpPage />
-      <LogIn />
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<SignUpPage />} />
+        <Route path="/LogInForm" element={<LogInForm />} />
+        <Route path="/mobileSearch" element={<MobileSearch />} />
+        <Route path="/search" element={<SearchPage />} />
+      </Routes>
     </>
   );
 }
 
 export default App;
-export { signUp };
+//export { signUp };

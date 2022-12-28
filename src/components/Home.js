@@ -1,16 +1,33 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import openSignInModal from "./modal";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Tweet from "../tweet";
+import MenuNavigator from "./menu";
+import SearchPage from "./search";
 
-function Navigate() {
-    return (
-        <>
-        <div>home</div>
-        <div>search</div>
-        <div>settings</div>
-        </>  
-    );
+function Home() {
+  /*let logged = false;
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (logged === false) {
+      navigate("/SignUp");
+    } else {
+      navigate("/");
+    }
+});*/
+  return (
+    <>
+      <div id="home-body">
+        <div id="home-post">
+          <Tweet />
+        </div>
+        <MenuNavigator />
+        <SearchPage />
+      </div>
+    </>
+  );
 }
 
-export default Navigate;
+//export { menuNavigator };
+export default Home;

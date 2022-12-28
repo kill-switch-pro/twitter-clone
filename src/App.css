@@ -24,6 +24,7 @@ div.first {
   height: 38rem;
   width: 39rem;
   background-color: rgb(64, 150, 207);
+  margin-left: 0rem;
 }
 .words {
   margin-left: 4rem;
@@ -63,44 +64,19 @@ button {
   color: #4c8ef0;
 }
 
-.signInModal,
-.logInModal {
-  border: 1px solid;
-  height: 20rem;
-  width: 20rem;
-  z-index: 999;
-  display: none;
-  position: fixed;
-  border-radius: 8px;
-  background-color: #4a84db;
-}
-
-#signUpBtn,
-#logInBtn , #logInModal {
+#signUpBtn {
   margin-left: 4rem;
   margin-top: 2rem;
   background-color: #4a84db;
   color: #f2f5f8;
 }
 
-.signInModal > h3,
-.logInModal > h3 {
-  margin-left: 7rem;
-}
-
 .registarForm {
   margin-left: 1rem;
 }
 
-#landingPage {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-}
-
 input[type="text"],
-#userPassword,
-#userLoginPassword {
+input[type="Password"] {
   border-radius: 6px;
   border: 1px solid;
   background-color: #f2f5f8;
@@ -110,4 +86,267 @@ input[type="date"] {
   border-radius: 6px;
   border: 1px solid;
   background-color: #f2f5f8;
+}
+
+form#signUpForm {
+  border-radius: 6px;
+  box-shadow: 3px 2px 4px 2px;
+  border: 1px solid blue;
+  left: 50rem;
+  top: 4rem;
+  position: fixed;
+  height: 19rem;
+  width: 20rem;
+}
+
+div#logIn-body {
+  margin-left: 2rem;
+}
+
+div#home-body {
+  background-color: white;
+  color: black;
+}
+
+#menu-twitter-icon {
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+}
+
+#landingPage-twitter-icon {
+  height: 6rem;
+  width: 7rem;
+  position: fixed;
+  top: 7rem;
+}
+
+div.menu {
+  width: 5%;
+  height: 100%;
+  color: black;
+  background-color: white;
+  position: fixed;
+  left: 2px;
+  top: 0rem;
+}
+
+.menuBody {
+  margin-top: 2rem;
+  margin-left: 50%;
+}
+
+#menu-home-icon,
+#menu-hash-icon,
+#menu-bell-icon,
+#menu-search-icon,
+#menu-Envelope-icon,
+#menu-book-icon,
+#menu-person-icon,
+#menu-arrow-icon,
+#menu-postCard-icon {
+  margin-top: 70%;
+}
+
+#home-post {
+  margin-left: 8rem;
+}
+
+#home-input {
+  border: 1px solid black;
+  height: 20rem;
+  margin-top: 0rem;
+  width: 100%;
+  border-top: 0px;
+  margin-left: -15px;
+  background-color: #fff;
+  outline: none;
+}
+
+#search-bar {
+  height: 5%;
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 16px;
+  margin-left: 7px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+#search-result {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+#search-icon {
+  z-index: 999;
+}
+
+#search-input {
+  border: 0;
+  outline: none;
+  height: 100%;
+  width: 70%;
+  margin-left: 5%;
+  font-size: large;
+}
+
+#search-body {
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#tweet-picture {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+}
+
+#tweet-profile {
+  display: flex;
+  flex-direction: row;
+}
+
+#tweet-all {
+  display: flex;
+  flex-direction: column;
+  margin-left: -15px;
+  height: 100%;
+  width: 68.2%;
+  border: 1px solid black;
+}
+
+#tweet-body {
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+}
+
+#tweet-image {
+  height: auto;
+  width: 48rem;
+}
+
+#tweet-reaction {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-top: 5px;
+}
+
+#tweet {
+  margin-left: 3rem;
+  margin-top: 0rem;
+}
+
+#tweet-input {
+  height: 5rem;
+  border: 0;
+  width: 100%;
+  outline: none;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  #sign-first {
+    display: none;
+  }
+
+  form#signUpForm {
+    position: fixed;
+    left: 10px;
+  }
+
+  div.menu {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 7%;
+    background-color: white;
+    justify-content: space-between;
+    bottom: 0;
+    position: fixed;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4%;
+  }
+
+  #disappear {
+    display: none;
+  }
+  /*
+  #menu-home-icon {
+    margin-left: 1px;
+  }
+  #menu-bell-icon {
+    margin-left: 10px;
+  }
+  #menu-Envelope-icon {
+    margin-left: 20px;
+  }
+  #menu-search-icon {
+    margin-left: 20px;
+  }
+*/
+  #tweet-all {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+  }
+
+  #home-post {
+    margin-left: 0px;
+  }
+
+  #search-body {
+    display: none;
+  }
+
+  #mobile-search-result {
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  #mobile-search-icon {
+    /* z-index: 999; */
+  }
+  #mobile-search-bar {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
+
+  #mobile-search-input {
+    border: 0;
+    outline: none;
+    height: 100%;
+    margin-top: 7px;
+    width: 70%;
+    margin-left: 5%;
+    font-size: large;
+  }
+
+  #mobile-search-body {
+    width: 90%;
+    height: 100%;
+  }
 }
